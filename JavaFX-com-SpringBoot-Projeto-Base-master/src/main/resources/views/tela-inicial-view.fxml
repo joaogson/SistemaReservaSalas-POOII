@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<VBox alignment="TOP_CENTER"
+      prefHeight="455.0"
+      prefWidth="488.0"
+      spacing="20.0"
+      xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.demo.controllers.TelaInicialController">
+
+  <Label alignment="TOP_CENTER" style="-fx-font-size: 20px;" text="Sistema de Reserva de Salas" />
+
+  <padding>
+    <Insets topRightBottomLeft="20.0" />
+  </padding>
+
+<HBox alignment="BASELINE_CENTER" maxWidth="Infinity" spacing="40.0">
+  <Button prefWidth="125.0" text="Salas" onAction="#onAbrirTelaListaSalasButtonClick" />
+  <Button prefWidth="125.0" text="Reservar Sala" onAction="#onAbrirTelaReservarButtonClick"/>
+</HBox>
+</VBox>

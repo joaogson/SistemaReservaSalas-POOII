@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.sun.javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.ReservaSalaController">
+
+    <padding>
+        <Insets topRightBottomLeft="20.0" />
+    </padding>
+    <top>
+        <VBox>
+            <padding>
+                <Insets bottom="15.0" />
+            </padding>
+            <Label alignment="TOP_CENTER" prefWidth="Infinity" text="Reservar Sala" textAlignment="CENTER">
+                <font>
+                    <Font size="18.0" />
+                </font></Label>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="30.0">
+            <HBox spacing="15.0">
+                <HBox spacing="10.0">
+                    <Label prefWidth="70" text="Responsavel" />
+                    <TextField fx:id="responsavelTextField" onKeyTyped="#onKeyTypedIdUser" />
+                </HBox>
+                <HBox spacing="10.0">
+                    <Label prefWidth="70" text="Sala" />
+                    <ComboBox prefWidth="150" fx:id="salaComboBox"/>
+                </HBox>
+
+            </HBox>
+
+            <HBox spacing="15.0">
+
+                <HBox spacing="10.0">
+                    <Label prefWidth="70" text="Data" />
+                    <TextField prefWidth="150" fx:id="diaTextField"/>
+                    <Label prefWidth="70" text="Horario" />
+                    <TextField prefWidth="50" fx:id="horarioInicioTextField"/>
+                    <Label alignment="CENTER" prefWidth="30" text="as" />
+                    <TextField prefWidth="50" fx:id="horarioFinalTextField"/>
+
+                </HBox>
+
+            </HBox>
+
+            <HBox spacing="15">
+
+                <Label prefWidth="70" text="Capacidade" />
+                <IntegerField prefWidth="35" fx:id="capacidadeTextField"/>
+
+            </HBox>
+
+            <HBox spacing="15">
+                <Label text="Descrição" />
+                <TextArea prefHeight="80" fx:id="descricaoTextArea"/>
+            </HBox>
+
+        </VBox>
+
+    </center>
+
+    <bottom>
+        <HBox alignment="BASELINE_CENTER" maxWidth="Infinity" spacing="40.0">
+            <Button prefWidth="125.0" text="Inicio" />
+            <Button prefWidth="125.0" text="Salas" />
+            <Button prefWidth="125.0" text="Confirmar Reserva" onAction="#confirmaReservaOnButtonClick" />
+        </HBox>
+    </bottom>
+
+
+
+</BorderPane>
