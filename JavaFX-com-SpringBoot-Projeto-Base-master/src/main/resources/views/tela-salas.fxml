@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<VBox alignment="TOP_CENTER"
+      prefHeight="455.0"
+      prefWidth="488.0"
+      spacing="20.0"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.demo.controllers.SalasController"> <!-- Ao comentar esta linha, a tela carregou, indicando possível problema na injeção do controller -->
+
+  <padding>
+    <Insets topRightBottomLeft="20.0" />
+  </padding>
+
+    <Label alignment="CENTER" prefWidth="Infinity" text="Salas" textAlignment="CENTER">
+      <font>
+
+      </font></Label>
+
+    <VBox prefWidth="Infinity" spacing="10.0">
+      <ListView fx:id="Salas" prefHeight="380" prefWidth="370.0" BorderPane.alignment="CENTER" />
+    </VBox>
+
+</VBox>

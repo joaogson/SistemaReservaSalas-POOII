@@ -17,4 +17,12 @@ public class Room {
 
     @OneToOne
     private MeetingReserve meeting;
+
+    public Room(String localization, String equipments, String roomType, int capacity) {
+        this.Localization = localization;
+        this.Equipments = equipments;
+        this.RoomType = roomType;
+        this.Capacity = capacity;
+        IsAvailable = true;
+    }
 }

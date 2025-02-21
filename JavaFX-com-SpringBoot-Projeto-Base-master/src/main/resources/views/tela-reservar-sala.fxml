@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.ReservaSalaController">
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.demo.controllers.ReservaSalaController">
 
     <padding>
         <Insets topRightBottomLeft="20.0" />
@@ -28,7 +28,7 @@
             <HBox spacing="15.0">
                 <HBox spacing="10.0">
                     <Label prefWidth="70" text="Responsavel" />
-                    <TextField fx:id="responsavelTextField" onKeyTyped="#onKeyTypedIdUser" />
+                    <ComboBox fx:id="responsavelComboBox" onAction="#onActionBuscaUserPorId" prefWidth="150"/>
                 </HBox>
                 <HBox spacing="10.0">
                     <Label prefWidth="70" text="Sala" />
@@ -41,11 +41,11 @@
 
                 <HBox spacing="10.0">
                     <Label prefWidth="70" text="Data" />
-                    <TextField prefWidth="150" fx:id="diaTextField"/>
+                    <TextField prefWidth="150" fx:id="dataReservaTextField"/>
                     <Label prefWidth="70" text="Horario" />
                     <TextField prefWidth="50" fx:id="horarioInicioTextField"/>
                     <Label alignment="CENTER" prefWidth="30" text="as" />
-                    <TextField prefWidth="50" fx:id="horarioFinalTextField"/>
+                    <TextField prefWidth="50" fx:id="horarioFimTextField"/>
 
                 </HBox>
 
@@ -66,15 +66,5 @@
         </VBox>
 
     </center>
-
-    <bottom>
-        <HBox alignment="BASELINE_CENTER" maxWidth="Infinity" spacing="40.0">
-            <Button prefWidth="125.0" text="Inicio" />
-            <Button prefWidth="125.0" text="Salas" />
-            <Button prefWidth="125.0" text="Confirmar Reserva" onAction="#confirmaReservaOnButtonClick" />
-        </HBox>
-    </bottom>
-
-
 
 </BorderPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="500" prefWidth="500" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.UserController">
+  <padding>
+    <Insets topRightBottomLeft="20.0" />
+  </padding>
+  <top>
+      <Label alignment="CENTER" prefWidth="Infinity" text="Usuario" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+
+  </top>
+
+  <center>
+      <HBox spacing="20">
+          <VBox spacing="20">
+              <Label text="Nome"/>
+              <TextField/>
+              <Label text="Cargo"/>
+              <TextField/>
+              <Button onAction="#onConfirmarButtonClick" prefWidth="125.0" text="Confirmar" />
+              <Button onAction="#onAdicionarButtonClick" prefWidth="125.0" text="Adicionar Usuario" />
+              <Button onAction="#onExcluirButtonClick" prefWidth="125.0" text="Excluir Usuario" />
+              <Button onAction="#onEditarButtonClick" prefWidth="125.0" text="Editar Usuario" />
+          </VBox>
+          <VBox>
+              <Label text="Usuarios"/>
+              <ListView/>
+          </VBox>
+      </HBox>
+
+
+    
+
+  </center>
+
+</BorderPane>

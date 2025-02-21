@@ -16,7 +16,7 @@ public class SpringFXMLLoader {
         this.context = context;
     }
 
-    // tCarrega um arquivo FXML para dentro do conexto do Spring
+    // Carrega um arquivo FXML para dentro do contexto do Spring
     public FXMLLoader load(String fxmlPath) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setControllerFactory(context::getBean);
