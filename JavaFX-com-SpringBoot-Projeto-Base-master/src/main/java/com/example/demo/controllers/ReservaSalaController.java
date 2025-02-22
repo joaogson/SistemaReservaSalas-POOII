@@ -6,25 +6,19 @@ import com.example.demo.entities.User;
 import com.example.demo.service.ReservaSalaService;
 import com.example.demo.service.RoomService;
 import com.example.demo.service.UserService;
-import com.example.demo.utils.AbridorJanela;
+
 import com.sun.javafx.scene.control.IntegerField;
-import javafx.application.Platform;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.ListCell;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cglib.core.Local;
 import org.springframework.stereotype.Controller;
-
 import java.net.URL;
-import java.sql.Time;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;

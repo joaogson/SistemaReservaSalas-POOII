@@ -67,4 +67,8 @@
 
     </center>
 
+    <bottom>
+        <Button fx:id="Confirmar" text="Confirmar"/>
+    </bottom>
+
 </BorderPane>

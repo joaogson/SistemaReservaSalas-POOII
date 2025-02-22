@@ -20,18 +20,17 @@
   <center>
       <HBox spacing="20">
           <VBox spacing="20">
-              <Label text="Nome"/>
-              <TextField/>
-              <Label text="Cargo"/>
-              <TextField/>
-              <Button onAction="#onConfirmarButtonClick" prefWidth="125.0" text="Confirmar" />
-              <Button onAction="#onAdicionarButtonClick" prefWidth="125.0" text="Adicionar Usuario" />
-              <Button onAction="#onExcluirButtonClick" prefWidth="125.0" text="Excluir Usuario" />
-              <Button onAction="#onEditarButtonClick" prefWidth="125.0" text="Editar Usuario" />
+              <Label text="Nome" />
+              <TextField fx:id="nomeTextField" />
+              <Label text="Cargo" />
+              <TextField fx:id="cargoTextField" />
+              <Button fx:id="adicionaUsuarioButton" disable="true" onAction="#onAdicionarButtonClick" prefWidth="125.0" text="Adicionar Usuario" />
+              <Button fx:id="excluirUsuarioButton" disable="true" onAction="#onExcluirButtonClick" prefWidth="125.0" text="Excluir Usuario" />
+              <Button fx:id="editarUsuarioButton" disable="true" onAction="#onEditarButtonClick" prefWidth="125.0" text="Editar Usuario" />
           </VBox>
           <VBox>
-              <Label text="Usuarios"/>
-              <ListView/>
+              <Label text="Usuarios" />
+              <ListView fx:id="usuarios" onMouseClicked="#HabilitarBotoes" pickOnBounds="false" />
           </VBox>
       </HBox>
 

@@ -18,5 +18,9 @@ public class User {
     @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
     private List<MeetingReserve> meetings = new ArrayList<MeetingReserve>();
 
-    
+
+    public User(String nome, int function) {
+        this.name = nome;
+        this.Function = function;
+    }
 }
