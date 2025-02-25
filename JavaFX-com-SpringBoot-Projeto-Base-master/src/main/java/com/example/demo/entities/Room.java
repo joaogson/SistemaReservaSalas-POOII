@@ -3,7 +3,7 @@ package com.example.demo.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Entity @Getter @Setter @AllArgsConstructor @NoArgsConstructor @ToString
+@Entity @Getter @Setter @AllArgsConstructor @NoArgsConstructor @ToString(doNotUseGetters = true)
 public class Room {
 
     @Id
@@ -24,5 +24,15 @@ public class Room {
         this.RoomType = roomType;
         this.Capacity = capacity;
         IsAvailable = true;
+    }
+
+    @Override
+    public String toString(){
+        return "Sala " + id +
+                " - " + RoomType;
+    }
+
+    public boolean isAvailable(){
+        return IsAvailable;
     }
 }

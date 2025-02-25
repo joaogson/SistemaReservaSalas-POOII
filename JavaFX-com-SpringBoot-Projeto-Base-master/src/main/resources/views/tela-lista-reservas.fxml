@@ -15,7 +15,7 @@
         <Insets topRightBottomLeft="20.0" />
     </padding>
     <top>
-        <Label alignment="CENTER" prefWidth="Infinity" text="Reservas" textAlignment="CENTER">
+        <Label  alignment="CENTER" prefWidth="Infinity" text="Reservas" textAlignment="CENTER">
             <font>
                 <Font size="18.0" />
             </font></Label>
@@ -23,7 +23,7 @@
     </top>
     <center>
         <VBox prefWidth="Infinity" spacing="10.0">
-            <ListView prefHeight="380" prefWidth="370.0" BorderPane.alignment="CENTER" />
+            <ListView fx:id="reservas" prefHeight="380" prefWidth="370.0" BorderPane.alignment="CENTER" />
         </VBox>
     </center>
 </BorderPane>

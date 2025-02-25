@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.demo.controllers.ReservaSalaController">
+<BorderPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.ReservaSalaController">
 
     <padding>
         <Insets topRightBottomLeft="20.0" />
@@ -24,15 +24,15 @@
     </top>
 
     <center>
-        <VBox spacing="30.0">
+        <VBox prefHeight="327.0" prefWidth="560.0" spacing="30.0">
             <HBox spacing="15.0">
                 <HBox spacing="10.0">
                     <Label prefWidth="70" text="Responsavel" />
-                    <ComboBox fx:id="responsavelComboBox" onAction="#onActionBuscaUserPorId" prefWidth="150"/>
+                    <ComboBox fx:id="responsavelComboBox" prefWidth="150" />
                 </HBox>
                 <HBox spacing="10.0">
                     <Label prefWidth="70" text="Sala" />
-                    <ComboBox prefWidth="150" fx:id="salaComboBox"/>
+                    <ComboBox fx:id="salaComboBox" prefWidth="150" />
                 </HBox>
 
             </HBox>
@@ -41,11 +41,11 @@
 
                 <HBox spacing="10.0">
                     <Label prefWidth="70" text="Data" />
-                    <TextField prefWidth="150" fx:id="dataReservaTextField"/>
+                    <TextField fx:id="dataReservaTextField" prefWidth="150" />
                     <Label prefWidth="70" text="Horario" />
-                    <TextField prefWidth="50" fx:id="horarioInicioTextField"/>
+                    <TextField fx:id="horarioInicioTextField" prefWidth="50" />
                     <Label alignment="CENTER" prefWidth="30" text="as" />
-                    <TextField prefWidth="50" fx:id="horarioFimTextField"/>
+                    <TextField fx:id="horarioFimTextField" prefWidth="50" />
 
                 </HBox>
 
@@ -54,13 +54,13 @@
             <HBox spacing="15">
 
                 <Label prefWidth="70" text="Capacidade" />
-                <IntegerField prefWidth="35" fx:id="capacidadeTextField"/>
+                <IntegerField fx:id="capacidadeTextField" prefWidth="35" />
 
             </HBox>
 
             <HBox spacing="15">
                 <Label text="Descrição" />
-                <TextArea prefHeight="80" fx:id="descricaoTextArea"/>
+                <TextArea fx:id="descricaoTextArea" prefHeight="80" />
             </HBox>
 
         </VBox>
@@ -68,7 +68,10 @@
     </center>
 
     <bottom>
-        <Button fx:id="Confirmar" text="Confirmar"/>
+        <HBox prefHeight="110.0" spacing="10.0">
+        <Button fx:id="Confirmar" onMouseClicked="#confirmaReservaOnButtonClick" text="Confirmar" alignment="CENTER_LEFT" />
+        <Label fx:id="LabelConfirmacao" alignment="TOP_LEFT" prefHeight="100" prefWidth="450" text="" textAlignment="JUSTIFY" wrapText="true" />
+        </HBox>
     </bottom>
 
 </BorderPane>

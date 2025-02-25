@@ -8,6 +8,8 @@ import javafx.collections.ObservableList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class RoomService {
 
@@ -26,5 +28,15 @@ public class RoomService {
             System.out.println(room);
         } */
         return observableList;
+    }
+
+    @Transactional
+    public Optional<Room> buscarSalaPorId(int id){
+        return roomRepository.findById(id);
+    }
+
+    @Transactional
+    public void Save(Room room){
+        roomRepository.save(room);
     }
 }

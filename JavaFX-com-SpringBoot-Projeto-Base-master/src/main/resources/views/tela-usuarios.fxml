@@ -27,11 +27,19 @@
               <Button fx:id="adicionaUsuarioButton" disable="true" onAction="#onAdicionarButtonClick" prefWidth="125.0" text="Adicionar Usuario" />
               <Button fx:id="excluirUsuarioButton" disable="true" onAction="#onExcluirButtonClick" prefWidth="125.0" text="Excluir Usuario" />
               <Button fx:id="editarUsuarioButton" disable="true" onAction="#onEditarButtonClick" prefWidth="125.0" text="Editar Usuario" />
+              <Label fx:id="LabelConfirmaAcao" text="" />
           </VBox>
-          <VBox>
-              <Label text="Usuarios" />
-              <ListView fx:id="usuarios" onMouseClicked="#HabilitarBotoes" pickOnBounds="false" />
-          </VBox>
+          <HBox prefWidth="350" spacing="30">
+              <VBox spacing="15">
+                  <Label text="Usuarios" />
+                  <ListView fx:id="usuarios" onMouseClicked="#HabilitarBotoes" pickOnBounds="false" />
+
+              </VBox>
+              <VBox fx:id="VboxReservas"  spacing="15.0" visible="false">
+                  <Label fx:id="UsuarioReserva" text="Reservas"  />
+                  <ListView fx:id="ReservasUsuario" onMouseClicked="#HabilitarBotoes" pickOnBounds="false"  />
+              </VBox>
+          </HBox>
       </HBox>
 
 

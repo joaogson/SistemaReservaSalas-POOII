@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
@@ -32,5 +33,27 @@ public class UserService {
         ObservableList<User> observableList = FXCollections.observableArrayList();
         users.forEach(observableList::add);
         return observableList;
+    }
+
+    @Transactional
+    public void save(User user){
+        try{
+            if(user != null)
+                userRepository.save(user);
+        } catch (NullPointerException e){
+            System.out.println("Erro: Usuario nulo");
+        }
+    }
+
+    @Transactional
+    public void delete(User user){
+        userRepository.delete(user);
+    }
+
+    @Transactional
+    public void edit(User user){
+        userRepository.findById((long)user.getId()).orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
+        User userAux = new User(user.getId(), user.getName(), user.getFunction());
+        save(user);
     }
 }

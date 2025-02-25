@@ -6,7 +6,7 @@ import lombok.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity @Getter @Setter @AllArgsConstructor @NoArgsConstructor @ToString
+@Entity @Getter @Setter @AllArgsConstructor @NoArgsConstructor @ToString(doNotUseGetters = true)
 public class User {
 
     @Id
@@ -22,5 +22,21 @@ public class User {
     public User(String nome, int function) {
         this.name = nome;
         this.Function = function;
+    }
+
+    public User(int id, String nome, int Function){
+        this.id = id;
+        this.name = name;
+        this.Function = Function;
+    }
+
+    public void setReservas(MeetingReserve meetingReserve){
+        meetings.add(meetingReserve);
+    }
+
+    @Override
+    public String toString(){
+        return id + " - Usuario: " +
+                name;
     }
 }
